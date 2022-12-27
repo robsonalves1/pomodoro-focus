@@ -1,0 +1,136 @@
+$main-back-red: #CF6764;
+$main-back-red-transparent: #ffffff1f;
+$btn-clicke-red: #bd514ec2;
+
+body {
+    background-color: #CF6764;
+    display: flex;
+    justify-content: center;
+    align-items: center;
+
+}
+
+.main-nav {
+    padding-top: 15px;
+    width: 450px;
+    display: grid;
+    grid-template-columns: 416px 0px;
+
+
+    #nav-logo {
+        display: flex;
+        align-items: center;
+        color: white;
+        font-weight: bold;
+        font-size: large;
+
+        img#check-icon {
+            align-items: center;
+            width: 20px;
+        }
+
+    }
+
+    #settings {
+        display: flex;
+        justify-content: center;
+        align-items: center;
+        height: 30px;
+        width: 30px;
+        border: none;
+        background-color: $main-back-red-transparent;
+
+        img#settings-icon {
+            width: 20px;
+        }
+    }
+}
+
+#div-time {
+    margin-top: 10px;
+    background-color: $main-back-red-transparent;
+    border-radius: 15px;
+
+    #div-btn-focus-break {
+        display: grid;
+        grid-template-columns: 1fr 1fr;
+        column-gap: 5px;
+
+
+
+        .btn-focus-break-time {
+            height: 50px;
+            background-color: $main-back-red-transparent;
+            border: none;
+            border-radius: 15px 15px 0 0;
+            font-size: large;
+            font-weight: bold;
+            color: white;
+
+        }
+
+        .clicked {
+            background-color: $btn-clicke-red;
+        }
+    }
+
+    .time-left {
+        display: flex;
+        justify-content: center;
+        font-size: 100px;
+        font-weight: bold;
+        color: white;
+        padding: 50px 0;
+    }
+
+    #div-btn-play-pause {
+        display: grid;
+        grid-template-columns: 150px 150px;
+        column-gap: 15px;
+        justify-content: center;
+        padding-bottom: 15px;
+
+        .btn-play-pause {
+            height: 40px;
+            border: none;
+            border-radius: 15px;
+            font-size: large;
+            font-weight: bold;
+            color: $main-back-red;
+
+        }
+    }
+}
+
+#div-settings {
+    width: 450px;
+    height: 338px;
+    display: grid;
+    grid-template-columns: 1fr;
+    position: relative;
+    top: -330px;
+    background-color: white;
+    border-radius: 15px;
+
+    h1 {
+        text-align: center;
+        height: 50px;
+    }
+
+    #div-min-sec {
+        display: grid;
+        grid-template-columns: repeat(2, 150px);
+        column-gap: 25px;
+        height: 50px;
+        justify-content: center;
+        align-items: center;
+
+        .input-min-sec-values {
+            background-color: rgb(206, 206, 206);
+            border-radius: 5px;
+            border: none;
+            width: 150px;
+            height: 30px;
+        }
+    }
+}
