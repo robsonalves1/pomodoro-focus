@@ -1,6 +1,7 @@
 $main-back-red: #CF6764;
 $main-back-red-transparent: #ffffff1f;
-$btn-clicke-red: #bd514ec2;
+$btn-clicked-red-version-1: #bd514ec2;
+$btn-clicked-red-version-2: #743c3ac2;
 
 body {
     background-color: #CF6764;
@@ -14,7 +15,7 @@ body {
     padding-top: 15px;
     width: 450px;
     display: grid;
-    grid-template-columns: 416px 0px;
+    grid-template-columns: 376px 0px;
 
 
     #nav-logo {
@@ -31,19 +32,37 @@ body {
 
     }
 
-    #settings {
+    #div-btn-main-nav {
         display: flex;
-        justify-content: center;
-        align-items: center;
-        height: 30px;
-        width: 30px;
-        border: none;
-        background-color: $main-back-red-transparent;
+        column-gap: 10px;
+        
+        .btn-main-nav {
+            display: flex;
+            justify-content: center;
+            align-items: center;
 
-        img#settings-icon {
-            width: 20px;
+            height: 30px;
+            width: 30px;
+            border: none;
+            background-color: $main-back-red-transparent;
+        }
+
+        #btn-settings {
+
+            img#settings-icon {
+                width: 20px;
+            }
+        }
+
+        #btn-profile {
+
+            img#profile-icon {
+                width: 20px;
+            }
         }
     }
+
+
 }
 
 #div-time {
@@ -70,7 +89,7 @@ body {
         }
 
         .clicked {
-            background-color: $btn-clicke-red;
+            background-color: $btn-clicked-red-version-1;
         }
     }
 
@@ -99,6 +118,11 @@ body {
             color: $main-back-red;
 
         }
+
+        .clicked {
+            background-color: $btn-clicked-red-version-2;
+            color: white;
+        }
     }
 }
 
@@ -110,7 +134,15 @@ body {
     position: relative;
     top: -330px;
     background-color: white;
+    color: $main-back-red;
     border-radius: 15px;
+
+    #btn-close {
+        height: 25px;
+        position: absolute;
+        top: 10px;
+        left: 415px;
+    }
 
     h1 {
         text-align: center;
@@ -122,6 +154,7 @@ body {
         grid-template-columns: repeat(2, 150px);
         column-gap: 25px;
         height: 50px;
+        font-weight: bold;
         justify-content: center;
         align-items: center;
 
