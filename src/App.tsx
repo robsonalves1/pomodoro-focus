@@ -1,10 +1,30 @@
 import React from 'react';
-import logo from './logo.svg';
 import { useState } from "react";
 import './App.scss'
-import { start } from 'repl';
 
-function MainNav(props: any) {
+
+interface MainNavProps {
+  settings: React.MouseEventHandler<HTMLButtonElement>
+}
+
+interface PomoTimeProps {
+  foc: React.MouseEventHandler<HTMLButtonElement>;
+  clicked: boolean;
+  running: boolean;
+  play: React.MouseEventHandler<HTMLButtonElement>;
+  pause: React.MouseEventHandler<HTMLButtonElement>;
+  min: number;
+  sec: number;
+}
+
+interface PomoSettingsProps {
+  settings: React.MouseEventHandler<HTMLAnchorElement>;
+  min: React.ChangeEventHandler<HTMLInputElement>;
+  sec: React.Dispatch<React.SetStateAction<number>>;
+  foc: any;
+}
+
+function MainNav({ settings }: MainNavProps) {
   return (
     <nav className="main-nav">
       <a id='nav-logo'>
@@ -19,7 +39,7 @@ function MainNav(props: any) {
         <button
           id="btn-settings"
           className="btn-main-nav"
-          onClick={props.settings}
+          onClick={settings}
         >
           <img
             src="https://pomofocus.io/icons/config-white.png"
@@ -44,7 +64,7 @@ function MainNav(props: any) {
   );
 }
 
-function PomoTime(props: any) {
+function PomoTime(props: PomoTimeProps) {
   const btnFocusClicked =
     <div id="div-btn-focus-break">
       <button
@@ -132,7 +152,7 @@ function PomoTime(props: any) {
   )
 }
 
-function PomoSettings(props: any) {
+const PomoSettings = (props: PomoSettingsProps) => {
   return (
     <div id='div-settings'>
       <a onClick={props.settings}>

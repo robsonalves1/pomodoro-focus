@@ -1,4 +1,7 @@
 This is a project based on the site https://pomofocus.io/
-The page it's only for student matters
+This page is only for learning purpose.
 
-<!-- Need to add profile link in the page -->
+When you clone this project in your machine you need to install "node-modules" and "sass" with npm, like below
+
+npm install node-module
+npm install sass
